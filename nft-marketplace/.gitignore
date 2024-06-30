@@ -1,0 +1,9 @@
+artifacts
+cache
+deployments
+node_modules
+.env
+.prettierignore
+.prettierrc
+solhint.json
+yarn.lock

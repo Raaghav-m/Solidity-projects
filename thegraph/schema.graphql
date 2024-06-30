@@ -1,0 +1,36 @@
+type ActiveItem @entity {
+  id: ID!
+  buyer: Bytes! # address
+  seller: Bytes! # address
+  nftAddress: Bytes! # address
+  tokenId: BigInt!
+  price: BigInt
+}
+type nftAdded @entity {
+  id: ID!
+  price: BigInt
+  tokenId: BigInt!
+  nftAddress: Bytes!
+  seller: Bytes!
+}
+type ItemBought @entity {
+  id: ID!
+  price: BigInt
+  tokenId: BigInt!
+  nftAddress: Bytes!
+  buyer: Bytes!
+}
+
+type ItemCanceled @entity {
+  id: ID!
+  seller: Bytes
+  tokenId: BigInt!
+  nftAddress: Bytes!
+}
+type PriceUpdated @entity {
+  id: ID!
+  seller: Bytes!
+  tokenId: BigInt!
+  nftAdded: Bytes!
+  price: BigInt
+}
